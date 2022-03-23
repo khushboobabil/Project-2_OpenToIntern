@@ -7,7 +7,7 @@ const collegeSchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
-      lowercase:true,
+      lowercase: true,
       trim: true,
     },
 
@@ -18,7 +18,7 @@ const collegeSchema = new mongoose.Schema(
     },
     logoLink: {
       type: String,
-      match:[/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/,"Enter Correct URL"],
+      match: [/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/, "Enter Correct URL"],
       required: true,
       trim: true,
     },

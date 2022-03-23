@@ -19,19 +19,22 @@ const internSchema = new mongoose.Schema({
     mobile: {
         type: Number,
         required: true,
-        match: [/^([+]\d{2})?\d{10}$/, "please fill a valid mobile Number"],
+        match: [/^[6-9]\d{9}$/, "please fill a valid mobile Number"],
         unique: true
     },
     collegeId: {
         type: ObjectId,
         ref: "college",
+        match: [/^[a-zA-Z]{24,24}$/, "Please fill Id with valid length"],
 
-        isDeleted: {
-            type: Boolean,
-            default: false
-        }
 
-    }
-}, { timeStamps: true })
+    },
+    isDeleted: {
+        type: Boolean,
+        default: false
+    },
+
+},
+    { timeStamps: true })
 
 module.exports = mongoose.model('intern', internSchema)
