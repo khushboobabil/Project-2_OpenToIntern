@@ -1,6 +1,5 @@
 const collegeModel = require("../models/collegeModel")
 const internModel = require("../models/internModels")
-
 const ObjectId = require("mongoose").Types.ObjectId;
 
 // validation//
